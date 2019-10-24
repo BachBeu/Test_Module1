@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = new Array(12, 6, 3, 7, 21, 5, 7);
+    let arr2 = new Array(12, 6, 3, 7, 21, 5, 7);
+    let arr3 = new Array(12, 6, 3, 7, 21, 5, 7);
+    let arr4 = new Array(12, 6, 3, 4, 21, 5, 7);
+    function tryRemoveFromArray(arr, n) {
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] == n){
+                for(let j = i; j < arr.length; j ++){
+                    arr[j] = arr[j+1];
+                }
+                arr.pop();
+            }
+        }
+        document.write(arr + "<br>");
+    }
+    tryRemoveFromArray(arr1, 2);
+    tryRemoveFromArray(arr2, 12);
+    tryRemoveFromArray(arr3, 7 );
+    tryRemoveFromArray(arr4, 7);
+</script>
+</body>
+</html>

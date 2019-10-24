@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+</head>
+<body>
+<script>
+    let arr1 = new Array(10, 5, 2, 8, -1, 6, 8);
+    let arr2 = new Array(2, 4, 0 , 5, 1);
+    let arr3 = new Array(-8, -6, -2, -1, -1, -1)
+    function findMaxScore(arr){
+        let max = arr[0];
+        if(arr.length == 0) return -1;
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    document.write(findMaxScore(arr1) + "<br>");
+    document.write(findMaxScore(arr2) + "<br>");
+    document.write(findMaxScore(arr3));
+</script>
+</body>
+</html>
